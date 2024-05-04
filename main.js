@@ -8,9 +8,7 @@ window.onload = function(){
     displayTime();
     setInterval(displayTime,1000);
 
-    //document.getElementById("content1").addEventListener('touchstart', logTouchStart);
-    //document.getElementById("content1").addEventListener('touchend', logTouchEnd);
-   
+    
      
     var msg1 ="今日の気分は？";
     document.getElementById("msg").textContent =msg1;
@@ -25,6 +23,8 @@ window.onload = function(){
     if (!b) {
         console.log("b is false");
     }
+
+    var a = false;
 }
 
 function onCharArea1Clicked() {
@@ -32,11 +32,9 @@ function onCharArea1Clicked() {
 }
 
 function kaiwa1(){
-    var a = false;
+    
     var msg2;
-    /*if(a==Boolean("true")){
-        msg2 ="いいね";
-    }*/
+    
     if (a) {
         msg2 = "いいね";
     }
@@ -90,7 +88,7 @@ function displayDay(){
 
 
 function btnAClick() {
-    a=Boolean("true");
+    a=true;
     //document.getElementById("msg").textContent ="いいね";
     kaiwa1();
 }
@@ -100,13 +98,6 @@ function btnBClick() {
     document.getElementById("msg").textContent =msg2;
 }
 
-/*function TouchStart() {
-    alert("タッチ開始");
-}
 
-function TouchEnd() {
-    console.log("タッチ終了");
-}
-*/
 
 
