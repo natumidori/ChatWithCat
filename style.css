@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.screen {
+    width: 300px;
+    aspect-ratio: 9 / 16;
+    background: #999999;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.clock_container {
+    width: 100%;
+    height: 50px;
+    background: #D4C3B9;
+    display: flex;
+    direction: row;
+    background-image: url(img5.png);
+    background-size: 100%;
+    
+}
+
+.clock {
+    width: 150px;
+    height: 100%;
+    font-style: italic;
+    font-size: 30px;
+    color:#5c4d4d;
+    padding-top: 10px ;
+    padding-left: 20px;
+    /*background: #e07878;*/
+}
+
+.day {
+    width: 100px;
+    height: 100%;
+    padding-top: 20px;
+    font-style: italic;
+    color:#5c4d4d;
+    /*background: #e5cf6d*/
+}
+
+.wether {
+    width: 50px;
+    height: 100%;
+    /*background: #5ec368;*/
+}
+
+.character {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #4f57c9;
+    
+    background-image: url(img2.png);
+    background-size: 100%;
+    
+    position: relative;
+    
+}
+
+.controller {
+    width: 100%;
+    background: #D4C3B9;
+    flex-grow: 1;
+   
+    
+}
+
+
+.message_container{
+    width: 100%;
+    /*background: #43f992;*/
+    height: 50%;
+    padding: 7% 10%;
+    background-image: url(img5.png);
+    background-size: 100%;
+   
+}
+
+.message{
+    width: 100%;
+    background: #AC9C93; 
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.buttons{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap:20px; 
+    background-image: url(img51.png);
+    background-size: 100%;
+    background-position:bottom;
+}
+
+.btn{    
+    width: 100px;
+    height: 40px;
+    background: #AC9C93;
+    color: #ffffff;
+    border: 3px solid #5c4d4d;
+    border-radius: 10px;
+}
+.btn:hover {
+    background: #dbcbc2;
+    color: #453939;
+    
+}
+
+
+#cat {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    position: absolute;
+    /*transform:rotate(10deg);*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform-origin: center bottom;
+    animation: yurayura 4s linear infinite;
+    /* animation: yurayura 2s ease-in-out infinite; */
+}
+@keyframes yurayura {
+    0% , 100%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+  }
