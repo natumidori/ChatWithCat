@@ -7,38 +7,47 @@ window.onload = function(){
 
     displayTime();
     setInterval(displayTime,1000);
-
     
-     
-    var msg1 ="今日の気分は？";
-    document.getElementById("msg").textContent =msg1;
     document.getElementById("btnA").addEventListener('click', btnAClick);
     document.getElementById("btnB").addEventListener('click', btnBClick);
-
-
     document.getElementById("char_area_1").addEventListener('click', onCharArea1Clicked);
+    /*
     var b = false;
     console.log("b: " + b);
     console.log("!b: " + !b);
     if (!b) {
         console.log("b is false");
     }
+    */
 
     var a = false;
+    var b = false;
 }
 
 function onCharArea1Clicked() {
-    console.log('onCharArea1Clicked');
+    //console.log('onCharArea1Clicked');
+    kaiwa1();
 }
 
 function kaiwa1(){
-    
-    var msg2;
-    
+    var msg1 ="今日の気分は？";
+    document.getElementById("msg").textContent =msg1;
+    btnA.textContent="良い";
+    btnB.textContent="悪い";
+    var msg2="";
     if (a) {
         msg2 = "いいね";
+        a=false;
+        document.getElementById("msg").textContent =msg2;
+        stopPropagation
     }
-    document.getElementById("msg").textContent =msg2;
+    if(b){
+        msg3 ="無理しないで";
+        b=false;
+        document.getElementById("msg").textContent =msg3;
+    }
+    
+    
 }
 
 function displayTime(){
@@ -77,25 +86,22 @@ function displayDay(){
             str ="土";break; 
     }
 
-    document.getElementById("dayofweek").textContent =`(${str})`;
+    //document.getElementById("dayofweek").textContent =`(${str})`;
 
     var day1 = new Date().getDate();
     var mon1 = new Date().getMonth();
     var today = `${mon1}/${day1}`;
-    document.getElementById(".today").textContent = today;
+    document.getElementById(".today").textContent = today+`(${str})`;
 }
-
-
 
 function btnAClick() {
     a=true;
-    //document.getElementById("msg").textContent ="いいね";
     kaiwa1();
 }
 
 function btnBClick() {
-    var msg2 ="無理しないで"; 
-    document.getElementById("msg").textContent =msg2;
+    b=true;
+    kaiwa1();
 }
 
 
